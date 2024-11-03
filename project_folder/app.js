@@ -24,9 +24,10 @@ app.get('/',function(req,res){
     res.send(form)
 })
 
-app.post("/submit_result", function(req, res){
-    console.log("Info: ", req.body)
-    res.send("Вы нажали на кнопку с типом submit");
+app.post("/submit_result",function(req,res){
+    console.log(req.body)
+    var post_text = req.body.text? "Вы отправили на сервер текст: " + req.body.text : "Вы отправили на сервер пустую строку"
+    res.send(post_text)
 });
 
 app.listen("3000",function(){
