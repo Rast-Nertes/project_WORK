@@ -6,7 +6,7 @@ var app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/',function(req,res){
+app.get('/', function(req,res){
     var form = '<!doctype html>'+
         '<html lang="ru">'+
     '<head>'+
