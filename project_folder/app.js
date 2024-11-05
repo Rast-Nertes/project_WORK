@@ -32,5 +32,5 @@ app.post("/submit_result",function(req,res){
 
 app.listen("3000",function(){
     console.log( "Сервер работает и слушает порт: 3000")
-})
+});
 
