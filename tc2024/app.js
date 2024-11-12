@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// Сидячая, ручная, умственная работа | Work sedentary, manual, mental
+
 var app = express();
 
 // view engine setup
