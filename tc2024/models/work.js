@@ -14,4 +14,4 @@ var workSchema = new Schema({
         default: Date.now
     }
 })
-module.exports.work = mongoose.model("work", workSchema)
+module.exports.work = mongoose.model("work", workSchema, "work")
