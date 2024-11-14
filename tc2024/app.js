@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost/tc2024')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var works = require('./routes/works');
 
 // Сидячая, ручная, умственная работа | Work sedentary, manual, mental
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/works', works);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
