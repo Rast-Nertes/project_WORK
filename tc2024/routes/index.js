@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user').User;
 
-/* GET home page. */
 router.get('/', function (req, res, next) {
   req.session.greeting = "Hi!!!";
   res.render('index', { title: 'Express', counter: req.session.counter });
@@ -13,6 +12,7 @@ router.get('/logreg', function (req, res, next) {
   res.render('logreg', { title: 'Вход' });
 });
 
+/* POST login/registration page. */
 router.post('/logreg', async function (req, res, next) {
   var username = req.body.username
   var password = req.body.password
